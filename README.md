@@ -65,16 +65,3 @@ The rule was deployed across all logical domain profiles (Domain, Private, and P
 
 ```powershell
 Test-NetConnection localhost -Port 23
-
-## Analysis of Diagnostic Output:
-
-Network Interface Integrity: PingSucceeded : True confirms that the local host's basic IP loopback routing function is completely operational and responding to standard ICMP traffic.
-
-Firewall Drop Confirmation: The system issued explicit connection warnings: WARNING: TCP connect to (127.0.0.1 : 23) failed.
-
-
-Core Result Metric: TcpTestSucceeded : False provides definitive empirical validation that our deployed firewall rule intercepted the TCP handshake attempt and dropped the packets cleanly before they could interface with the OS.
-
-## Outcome & Traffic Filtering Summary
-
-Through the successful execution of this task, foundational competencies in host-based firewall administration and access control management were verified.
