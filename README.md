@@ -2,9 +2,9 @@
 A practical demonstration of deploying custom inbound firewall rules to manage network security boundaries.
 
 ## 📌 Project Overview
-- [cite_start]**Objective:** Configure, apply, and systematically test basic inbound firewall filtering rules to block or allow network traffic based on distinct protocols and ports[cite: 4].
+-**Objective:** Configure, apply, and systematically test basic inbound firewall filtering rules to block or allow network traffic based on distinct protocols and ports[cite: 4].
 - **Environment:** Windows 11 Home/Pro
-- [cite_start]**Core Security Utility:** Windows Defender Firewall with Advanced Security [cite: 5]
+-**Core Security Utility:** Windows Defender Firewall with Advanced Security [cite: 5]
 - **Verification Toolkit:** Windows PowerShell (`Test-NetConnection` utility)
 
 ---
@@ -12,12 +12,12 @@ A practical demonstration of deploying custom inbound firewall rules to manage n
 ## 🛠️ Step-by-Step Implementation & Documentation
 
 ### Step 1: Initialize the Firewall Management Console
-[cite_start]The Windows Defender Firewall with Advanced Security snap-in was launched by executing `wf.msc` via the Windows Run dialog[cite: 8]. This console provides the granular interface required to establish custom administrative network access control lists (ACLs).
+The Windows Defender Firewall with Advanced Security snap-in was launched by executing `wf.msc` via the Windows Run dialog[cite: 8]. This console provides the granular interface required to establish custom administrative network access control lists (ACLs).
 
 * **System Baseline:** Navigated directly to the **Inbound Rules** engine on the left-hand menu tree to review active rules.
 
 ![Inbound Rules Console](screenshot_1.png)
-[cite_start]*Figure 1: Initial state of the Windows Defender Firewall Inbound Rules dashboard[cite: 6, 8].*
+*Figure 1: Initial state of the Windows Defender Firewall Inbound Rules dashboard[cite: 6, 8].*
 
 ---
 
