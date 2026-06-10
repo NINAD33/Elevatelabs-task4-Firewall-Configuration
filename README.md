@@ -76,6 +76,7 @@ Core Result Metric: TcpTestSucceeded : False provides definitive empirical valid
 
 ![Active Analysis Verification](Screenshots/screenshot_6.png)
 *Figure 6: Terminal trace displaying successful, active packet filtering on Port 23.
+---
 
 ## 📊 Outcome & Traffic Filtering Summary
 
