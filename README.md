@@ -65,3 +65,25 @@ To evaluate the active state and efficacy of the rule, a local terminal connecti
 
 ```powershell
 Test-NetConnection localhost -Port 23
+```
+## Analysis of Diagnostic Output
+
+Network Interface Integrity: PingSucceeded : True confirms that the local host's basic IP loopback routing function is completely operational and responding to standard ICMP traffic.
+
+Firewall Drop Confirmation: The system issued explicit connection warnings: WARNING: TCP connect to (127.0.0.1 : 23) failed.
+
+Core Result Metric: TcpTestSucceeded : False provides definitive empirical validation that our deployed firewall rule intercepted the TCP handshake attempt and dropped the packets cleanly before they could interface with the OS.
+
+![Active Analysis Verification](Screenshots/screenshot_6.png)
+*Figure 6: Terminal trace displaying successful, active packet filtering on Port 23.
+
+## 📊 Outcome & Traffic Filtering Summary
+
+Through the successful execution of this task, foundational competencies in host-based firewall administration and access control management were verified.
+
+How Firewalls Filter Traffic:-
+A firewall functions as a network security gateway operating at the interface boundary of the operating system's kernel stack. Traffic filtering operates via an ordered sequential evaluation of network packet headers against the Access Control List (ACL):
+
+Header Inspection: As a data unit arrives, the filtering engine reads structural packet properties, including Source IP Address, Destination IP Address, Transport Protocol (TCP/UDP), and Destination Port.
+
+Policy Enforcement: If a packet's metadata matches an established rule criteria, the engine enforces its mapped action. In this project's scenario, when a socket request target matched TCP Port 23, the firewall executed an internal block policy. The system quietly discarded (dropped) the traffic, cutting off potential network discovery or remote exploit footprints from interacting with core OS applications.
